@@ -2,9 +2,7 @@
 ;
 #include C:\68HCS12\registers.inc
 ;
-; Professor:  Khadidja Kaci Taouch
-; Author(s):    Hojhan Siavash Glolani, Andrew Moses
-; Student Number(s):  040735001, 041083922
+; Author(s):    Hojhan Siavash Glolani
 ; Date:   2023-08-10
 ;
 ; Purpose:      Credit Card Number Validation
@@ -90,7 +88,7 @@ NextCheck
                  staa   InValidResult           ; Store the number of invalid credit cards in InValidResult
                  stab   ValidResult             ; Store the number of valid credit cards in ValidResult
 
-; Do not change and code below here
+
 Finished        jsr     Config_HEX_Displays
 Display         ldaa    ValidResult
                 ldab    #DIGIT3_PP0             ; Select MSB
@@ -106,12 +104,12 @@ Display         ldaa    ValidResult
 
 
 ; Filenames without a "C:\68HCS12\Lib\" path MUST be placed in the SOURCE FOLDER
-#include Add_Odd.asm                            ; you write this one
-#include Add_Even.asm                           ; you write this one
-#include Validate_CC.asm                        ; you write this one
-#include Config_HEX_Displays.asm                ; provided to you - no changes permitted
-#include HEX_Display.asm                        ; provided to you - no changes permitted
-#include C:\68HCS12\Lib\Delay_ms.asm            ; Library File    - no changes permitted
+#include Add_Odd.asm                            
+#include Add_Even.asm                           
+#include Validate_CC.asm                        
+#include Config_HEX_Displays.asm                
+#include HEX_Display.asm                       
+#include C:\68HCS12\Lib\Delay_ms.asm            
 
                 end
 
