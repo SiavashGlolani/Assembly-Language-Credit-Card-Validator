@@ -5,7 +5,7 @@
         ; -
 
 ; Source: -
-        ; Written by Siavash Golani for final semester assignment 4 of CST
+        ; Written by Siavash Golani
         ; Part of credit card validation task
 
 ;Precondition: -
