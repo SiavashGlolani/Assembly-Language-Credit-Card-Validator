@@ -7,26 +7,25 @@
 ;
 ; Purpose:      Credit Card Number Validation
 
-; Address Constants - Do NOT change
+; Address Constants
 STORAGE1        equ     $1000                   ; Storage starts here for original cards
 FINALRESULTS    equ     $1030                   ; Final number of valid and invalid cards
 PROGRAMSTART    equ     $2000                   ; Executable code starts here
 
-; Hardware Configuration - Complete the Constant values
+; Hardware Configuration 
 DIGIT3_PP0      equ    %1110                    ; HEX Display MSB (left most digit)
 DIGIT0_PP3      equ    %0111                    ; Display LSB (right most digit)
 
 
-; Program Constants - Do not change these values
+; Program Constants 
 NUMBERSOFCARDS  equ     6                       ; Six Cards to process
 NUMDIGITS       equ     4                       ; Each Card has 4 digits
 
-; You may add other Constant here if needed
 
 
 
-; DO NOT CHANGE THE DELAY_VALUE; OTHERWISE THE VALUES WILL INCORRECTLY BE DISPLAYED
-; IN THE SIMULATOR
+
+
 DELAY_VALUE     equ     64                      ; HEX Display Multiplexing Delay
 ZERO            equ     0
                 org STORAGE1                    ; Note: a Label cannot be placed
@@ -35,16 +34,15 @@ Cards                                           ; on same line as org statement
 EndCards
 
 
-; Do not change this code.
-; Place your results here as you loop through your solution
+
                 org  FINALRESULTS
 InvalidResult   ds      1                       ; Count of Invalid CARDs processed
 ValidResult     ds      1                       ; Count of Valid CARDs processed
-; end of do not change
+
 
                 org     ProgramStart            ; program start
                 lds     #ProgramStart           ; Stack used to protect values
-; --- Your code starts here
+
 
                  ldx    #Cards                  ; loading the address of the array of credit cards
 ReadCards
@@ -103,7 +101,7 @@ Display         ldaa    ValidResult
                 bra     Display                 ; Endless loop
 
 
-; Filenames without a "C:\68HCS12\Lib\" path MUST be placed in the SOURCE FOLDER
+
 #include Add_Odd.asm                            
 #include Add_Even.asm                           
 #include Validate_CC.asm                        
@@ -113,4 +111,4 @@ Display         ldaa    ValidResult
 
                 end
 
-************************* No Code Past Here ****************************
+
