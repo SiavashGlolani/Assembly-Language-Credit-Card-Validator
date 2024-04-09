@@ -1,7 +1,4 @@
 ; HEX_Display.asm
-; Author:               D. Haley
-; Student Number:       Faculty
-; Date:                 28 Nov 2020
 ;
 ; Purpose:              Subroutine to display a value on a Hex Display
 ;
@@ -15,11 +12,7 @@
 ;
 ; Postcondition:        X is destroyed
 ;                       A is destroyed
-; Use:                             -
-;                       Place Hex_Display.asm in  your Source Code folder
-;                                     -
-;                       insert the following after your last line of source
-;                       and before "end"
+;
 ;
 ;                       #include Config_HEX_Displays.asm
 ;
