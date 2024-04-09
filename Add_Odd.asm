@@ -5,7 +5,7 @@
         ; -
 
 ; Source: -
-        ; Written by Siavash Golani and Andrew Moses for assignment 4 of CST
+        ; Written by Siavash Golani
         ; Part of credit card validation task
 
 ;Precondition: -
